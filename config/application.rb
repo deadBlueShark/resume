@@ -18,8 +18,12 @@ module Resume
     config.load_defaults 5.1
 
     config.generators do |generator|
-      generator.assets false
-      #generator.view_specs false
+      #generator.assets false
+      generator.stylesheets false
+      generator.javascripts false
+
+      generator.template_engine :erb # Default
+      generator.orm :active_record # Default
     end
     config.generators.system_tests = nil
   end
