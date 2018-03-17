@@ -5,6 +5,16 @@
     <%= render 'layouts/import' %>
   </head>
   <body>
+    <div>
+      <div class="item">
+        <%= link_to "Blogs", blogs_path %>
+      </div>
+      <div class="item">
+        <%= link_to "Portfolio", portfolios_path %>
+      </div>
+    </div>
+    <div class="clearfix">
+    </div>
     <%= yield %>
   </body>
 </html>

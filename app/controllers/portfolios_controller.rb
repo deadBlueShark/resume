@@ -47,6 +47,10 @@ class PortfoliosController < ApplicationController
   end
 
   def load_portfolio
-    @portfolio = Portfolio.find_by(id: params[:id])
+    begin
+      @portfolio = Portfolio.friendly.find(params[:id])
+    rescue
+      redirect_to portfolios_path
+    end
   end
 end

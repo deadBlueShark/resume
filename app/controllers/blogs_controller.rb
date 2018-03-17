@@ -51,7 +51,7 @@ class BlogsController < ApplicationController
 
   private
     def load_blog
-      @blog = Blog.find(params[:id])
+      @blog = Blog.friendly.find(params[:id])
     end
 
     def blog_params

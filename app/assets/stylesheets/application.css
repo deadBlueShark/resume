@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+.item {
+  float: right;
+  margin-left: 50px;
+}
+
+.clearfix {
+  clear: both;
+}
