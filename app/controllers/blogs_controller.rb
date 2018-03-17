@@ -1,5 +1,5 @@
 class BlogsController < ApplicationController
-  before_action :load_blog, only: [:show, :edit, :update, :destroy]
+  before_action :load_blog, only: [:show, :edit, :update, :destroy, :change_status]
 
   def index
     @blogs = Blog.all
@@ -39,6 +39,11 @@ class BlogsController < ApplicationController
         format.json { render json: @blog.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def change_status
+    @blog.draft? ? @blog.published! : @blog.draft!
+    redirect_to blogs_path
   end
 
   def destroy
