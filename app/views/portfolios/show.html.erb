@@ -5,3 +5,7 @@
   <p><%= @portfolio.body %></p>
   <%= image_tag @portfolio.main_image %>
 </div>
+
+<% @portfolio.technologies.each do |technology| %>
+  <%= technology.name %>
+<% end %>

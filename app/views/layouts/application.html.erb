@@ -27,5 +27,11 @@
       </div>
     </div>
     <%= yield %>
+
+    <div>
+      <% if session[:source] %>
+        Thank for visiting <%= session[:source] %>
+      <% end %>
+    </div>
   </body>
 </html>
