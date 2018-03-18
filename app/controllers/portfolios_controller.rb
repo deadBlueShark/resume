@@ -9,6 +9,7 @@ class PortfoliosController < ApplicationController
 
   def new
     @portfolio = Portfolio.new
+    3.times {@portfolio.technologies.build}
   end
 
   def create
@@ -40,9 +41,9 @@ class PortfoliosController < ApplicationController
   private
 
   def portfolio_params
-    params.require(:portfolio).permit(:title, :subtitle, :body).merge(
-      main_image: "http://via.placeholder.com/600x400",
-      thumb_image: "http://via.placeholder.com/350x200"
+    params.require(:portfolio).permit(:title, :subtitle, :body,
+      technologies_attributes: [:name]).merge(main_image: image_generator(600, 400),
+      thumb_image: image_generator(250, 200)
     )
   end
 
