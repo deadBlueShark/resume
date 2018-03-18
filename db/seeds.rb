@@ -1,8 +1,13 @@
-10.times do
-  Blog.create(
-    title: FFaker::Book.title,
-    body: FFaker::Book.description
+5.times do
+  topic = Topic.create(
+    name: FFaker::Book.genre
   )
+  10.times do
+    topic.blogs.create(
+      title: FFaker::Book.title,
+      body: FFaker::Book.description
+    )
+  end
 end
 
 5.times do
