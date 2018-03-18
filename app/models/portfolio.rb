@@ -3,7 +3,7 @@ class Portfolio < ApplicationRecord
 
   friendly_id :title, use: :slugged
 
-  has_many :technologies
+  has_many :technologies, dependent: :destroy
 
   accepts_nested_attributes_for :technologies, reject_if: -> attr {attr[:name].blank?}
 

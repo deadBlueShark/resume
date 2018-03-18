@@ -17,6 +17,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'faker'
 gem 'ffaker'
 gem 'friendly_id', '~> 5.1.0'
+gem 'devise'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
