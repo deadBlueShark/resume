@@ -21,8 +21,7 @@ gem 'devise'
 gem 'bootstrap', '~> 4.0.0'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'jquery-rails'
-
-gem 'portfolio_view_tool', git: 'https://github.com/chiNguyenTrex/portfolio_view_tool'
+gem 'petergate'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
