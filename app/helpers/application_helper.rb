@@ -29,6 +29,10 @@ module ApplicationHelper
     time_ago_in_words(time) + " ago"
   end
 
+  def copyright name, message
+      "&copy; #{Time.now.year} | <b>#{name}</b> #{message}".html_safe
+  end
+
   private
 
   def insert_content_to_tag html_tag, content, html_class = nil
