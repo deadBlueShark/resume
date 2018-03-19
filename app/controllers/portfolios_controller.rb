@@ -1,7 +1,7 @@
 class PortfoliosController < ApplicationController
   before_action :load_portfolio, except: [:index, :new, :create]
   def index
-    @portfolios = Portfolio.all
+    @portfolios = Portfolio.includes(:technologies)
   end
 
   def show
@@ -41,10 +41,14 @@ class PortfoliosController < ApplicationController
   private
 
   def portfolio_params
-    params.require(:portfolio).permit(:title, :subtitle, :body,
-      technologies_attributes: [:name]).merge(main_image: image_generator(600, 400),
-      thumb_image: image_generator(250, 200)
-    )
+    params.require(:portfolio).permit(:title,
+                                      :subtitle,
+                                      :body,
+                                      technologies_attributes: [:name]
+                                    ).merge(
+                                      main_image: image_generator(600, 400),
+                                      thumb_image: image_generator(250, 200)
+                                    )
   end
 
   def load_portfolio

@@ -7,7 +7,7 @@
   <body>
     <div>
       <div class="item">
-        <% if current_user %>
+        <% if current_user.is_a? User %>
           <%= link_to "Logout", destroy_user_session_path, method: :delete %>
         <% else %>
           <%= link_to "Login", new_user_session_path %>
@@ -27,5 +27,11 @@
       </div>
     </div>
     <%= yield %>
+
+    <div>
+      <% if session[:source] %>
+        Thank for visiting <%= session[:source] %>
+      <% end %>
+    </div>
   </body>
 </html>
