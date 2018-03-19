@@ -1,0 +1,11 @@
+<div>
+  <%= portfolio_item.title %> -
+  [
+    <% portfolio_item.technologies.each do |technology| %>
+      <%= technology.name %>,
+    <% end %>
+  ]
+  <%= link_to "Show", show_portfolio_path(portfolio_item) %>
+  <%= link_to "Edit", edit_portfolio_path(portfolio_item) %>
+  <%= link_to "Delete", portfolio_path(portfolio_item), method: :delete %>
+</div>

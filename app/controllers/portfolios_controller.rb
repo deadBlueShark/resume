@@ -4,7 +4,7 @@ class PortfoliosController < ApplicationController
   before_action :load_portfolio, except: [:index, :new, :create]
 
   def index
-    @portfolios = Portfolio.includes(:technologies)
+    @portfolio_items = Portfolio.includes(:technologies)
   end
 
   def show

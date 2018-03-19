@@ -21,6 +21,14 @@ module ApplicationHelper
     insert_content_to_tag(:div, content) if session[:source]
   end
 
+  def shorten_text content, length
+    truncate content, length: length
+  end
+
+  def time_ago time
+    time_ago_in_words(time) + " ago"
+  end
+
   private
 
   def insert_content_to_tag html_tag, content, html_class = nil
