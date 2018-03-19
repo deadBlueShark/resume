@@ -18,6 +18,9 @@ gem 'faker'
 gem 'ffaker'
 gem 'friendly_id', '~> 5.1.0'
 gem 'devise'
+gem 'bootstrap', '~> 4.0.0'
+gem 'sprockets-rails', :require => 'sprockets/railtie'
+gem 'jquery-rails'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
