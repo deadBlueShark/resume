@@ -3,4 +3,5 @@ class ApplicationController < ActionController::Base
   include Placeholder
   include DeviseParameterWhitelist
   include SetSource
+  include CurrentUserDetection
 end
