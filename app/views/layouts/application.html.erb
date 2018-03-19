@@ -5,42 +5,13 @@
     <%= render 'layouts/import' %>
   </head>
   <body>
-    <div>
-      <div class="item">
-        <% if current_user.is_a? User %>
-          <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-        <% else %>
-          <%= link_to "Login", new_user_session_path %>
-          <%= link_to "Register", new_user_registration_path %>
-        <% end %>
-      </div>
-      <div class="item">
-        <%= link_to "Blog", blogs_path %>
-      </div>
-      <div class="item">
-        <%= link_to "Portfolio", portfolios_path %>
-      </div>
-      <div class="item">
-        <%= link_to "About", about_path %>
-      </div>
-      <div class="item">
-        <%= link_to "Contact", contact_path %>
-      </div>
-      <div class="item">
-        <%= link_to "Home", root_path %>
-      </div>
-    </div>
+    <%= render "layouts/nav" %>
     <div class="clearfix">
       <div>
         <%= render "shared/flash" %>
       </div>
     </div>
     <%= yield %>
-
-    <div>
-      <% if session[:source] %>
-        Thank for visiting <%= session[:source] %>
-      <% end %>
-    </div>
+    <%= source_helper %>
   </body>
 </html>
