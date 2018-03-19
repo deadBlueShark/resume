@@ -1,4 +1,5 @@
 class BlogsController < ApplicationController
+  layout "blog"
   before_action :load_blog, only: [:show, :edit, :update, :destroy, :change_status]
 
   def index

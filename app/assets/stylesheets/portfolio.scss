@@ -1,0 +1,30 @@
+.item {
+  float: left;
+  margin-left: 50px;
+  color: red;
+}
+
+.clearfix {
+  clear: both;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: red;
+}
+
+.navigation {
+  margin: auto;
+  width: 50%;
+  background: navy;
+  height: 30px;
+  line-height: 30px;
+  a {
+    color: white;
+    &:hover {
+      color: red;
+    }
+  }
+}

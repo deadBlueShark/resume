@@ -1,5 +1,4 @@
-<p id="notice"><%= notice %></p>
-
+<% provide :title, "Blogs" %>
 <h1>Blogs</h1>
 
 <table>
@@ -7,21 +6,13 @@
     <tr>
       <th>Title</th>
       <th>Body</th>
+      <th>Date</th>
       <th colspan="4"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @blogs.each do |blog| %>
-      <tr>
-        <td><%= blog.title %></td>
-        <td><%= blog.body %></td>
-        <td><%= link_to change_block_status(blog), change_status_blog_path(blog) %></td>
-        <td><%= link_to 'Show', blog %></td>
-        <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-        <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+    <%= render @blogs %>
   </tbody>
 </table>
 
