@@ -1,5 +1,8 @@
 class PortfoliosController < ApplicationController
+  layout "portfolio"
+
   before_action :load_portfolio, except: [:index, :new, :create]
+
   def index
     @portfolios = Portfolio.includes(:technologies)
   end
