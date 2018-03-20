@@ -5,14 +5,14 @@ module ApplicationHelper
   end
 
   def user_log_status
-    if current_user.is_a? User
-      logout_link = link_to "Logout", destroy_user_session_path, method: :delete
-      insert_content_to_tag :div, logout_link, "item"
-    else
+    if current_user.is_a? GuestUser
       login_link = link_to "Login", new_user_session_path
       signup_link = link_to "Register", new_user_registration_path
       insert_content_to_tag(:div, login_link, "item") +
       insert_content_to_tag(:div, signup_link, "item")
+    else
+      logout_link = link_to "Logout", destroy_user_session_path, method: :delete
+      insert_content_to_tag :div, logout_link, "item"
     end
   end
 
@@ -31,6 +31,15 @@ module ApplicationHelper
 
   def copyright name, message
       "&copy; #{Time.now.year} | <b>#{name}</b> #{message}".html_safe
+  end
+
+  def flash_type type
+    case type
+    when :notice then "alert-info"
+    when :error then "alert-danger"
+    when :alert then "alert-warning"
+    when :success then "alert-success"
+    end
   end
 
   private

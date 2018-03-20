@@ -1,9 +1,3 @@
-GIT
-  remote: https://github.com/chiNguyenTrex/portfolio_view_tool
-  revision: fc19e8114ecfa71f8e06c82f84d15d0d088d9605
-  specs:
-    portfolio_view_tool (0.1.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -107,6 +101,8 @@ GEM
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
     orm_adapter (0.5.0)
+    petergate (1.8.1)
+      activerecord (> 4.0.0)
     pg (1.0.0)
     popper_js (1.12.9)
     puma (3.11.3)
@@ -202,8 +198,8 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)
+  petergate
   pg (>= 0.18, < 2.0)
-  portfolio_view_tool!
   puma (~> 3.7)
   rails (~> 5.1.5)
   sass-rails (~> 5.0)

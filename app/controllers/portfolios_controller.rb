@@ -1,6 +1,7 @@
 class PortfoliosController < ApplicationController
   layout "portfolio"
-
+  access all: [:show, :index],
+    user: {except: [:new, :edit, :create, :update, :destroy]}, admin: :all
   before_action :load_portfolio, except: [:index, :new, :create]
 
   def index

@@ -1,6 +1,8 @@
 class BlogsController < ApplicationController
   layout "blog"
   before_action :load_blog, only: [:show, :edit, :update, :destroy, :change_status]
+  access all: [:show, :index],
+    user: {except: [:new, :edit, :create, :update, :destroy, :change_status]}, admin: :all
 
   def index
     @blogs = Blog.all
