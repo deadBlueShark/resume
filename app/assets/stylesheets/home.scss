@@ -39,6 +39,7 @@ body {
 
 .cover-container {
   max-width: 60em;
+  min-width: 60em
 }
 
 
@@ -104,4 +105,13 @@ body {
  */
 .mastfoot {
   color: rgba(255, 255, 255, .5);
+}
+
+/*
+ * Contact location
+ */
+
+#map {
+  height: 400px;
+  width: 100%;
 }
