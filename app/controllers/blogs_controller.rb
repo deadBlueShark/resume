@@ -5,6 +5,7 @@ class BlogsController < ApplicationController
     user: {except: [:new, :edit, :create, :update, :destroy, :change_status]}, admin: :all
 
   def index
+    @topics = Topic.all
     @blogs = Blog.all
   end
 
