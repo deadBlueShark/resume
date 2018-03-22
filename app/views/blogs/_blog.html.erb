@@ -1,10 +1,6 @@
-<tr>
-  <td class="blog-title"><%= blog.title %></td>
-  <td><%= shorten_text blog.body, 50 %></td>
-  <td class="blog-created-time"><%= time_ago blog.created_at %></td>
-  <td><%= link_to change_block_status(blog),
-    change_status_blog_path(blog) if logged_in?(:admin) %></td>
-  <td><%= link_to 'Show', blog %></td>
-  <td><%= link_to 'Edit', edit_blog_path(blog) if logged_in?(:admin) %></td>
-  <td><%= link_to 'Destroy', blog, method: :delete if logged_in?(:admin) %></td>
-</tr>
+<div class="blog-post">
+  <h2 class="blog-post-title"><%= link_to blog.title.downcase.capitalize, blog %></h2>
+  <p class="blog-post-meta"><%= blog.created_at.strftime("%B %d, %Y") %> by <a href="#">Jacob</a></p>
+
+  <p><%= blog.body %></p>
+</div>

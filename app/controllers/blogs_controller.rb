@@ -1,12 +1,12 @@
 class BlogsController < ApplicationController
   layout "blog"
   before_action :load_blog, only: [:show, :edit, :update, :destroy, :change_status]
+  before_action :load_topics
   access all: [:show, :index],
     user: {except: [:new, :edit, :create, :update, :destroy, :change_status]}, admin: :all
 
   def index
-    @topics = Topic.all
-    @blogs = Blog.all
+    @blogs = Blog.page(params[:page]).per(25)
   end
 
   def show
@@ -65,5 +65,9 @@ class BlogsController < ApplicationController
 
     def blog_params
       params.require(:blog).permit(:title, :body)
+    end
+
+    def load_topics
+      @topics = Topic.all
     end
 end
