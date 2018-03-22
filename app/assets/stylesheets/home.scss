@@ -21,8 +21,12 @@ a:hover {
 
 html,
 body {
-  height: 100%;
   background-color: #495057 !important;
+}
+
+body {
+  height: auto;
+  min-height: 100vh !important;
 }
 
 body {
@@ -86,6 +90,13 @@ body {
   }
 }
 
+/*
+ * Footer
+ */
+footer.mastfoot.mt-auto {
+  padding-top: 2em;
+}
+
 
 /*
  * Cover
@@ -114,4 +125,10 @@ body {
 #map {
   height: 400px;
   width: 100%;
+}
+
+
+.edit-page {
+  padding-top: 5em;
+  color: #000;
 }
