@@ -1,2 +1,6 @@
-<h1>Information contact</h1>
-<div><%= number_to_phone 1687491748, country_code: 84 %></div>
+<% provide :title, "Contact" %>
+<h3>My location on Google Map</h3>
+<div id="map"></div>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMin6dLwRHZydK1h5GWwpzTCKEn8Kx3Nc&callback=initMap">
+</script>

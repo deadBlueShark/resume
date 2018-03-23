@@ -1,0 +1,4 @@
+<%= link_to_unless(current_page.last?, raw('Older'), url, remote: remote,
+  class: "btn btn-outline-primary") do |name| -%>
+  <a class="btn btn-outline-secondary disabled" href="#"><%= name %></a>
+<% end -%>

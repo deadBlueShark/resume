@@ -1,14 +1,16 @@
-<div>
-  <%= portfolio_item.title %> -
-  [
-    <% portfolio_item.technologies.each do |technology| %>
-      <%= technology.name %>,
-    <% end %>
-  ]
-  <%= link_to "Show", show_portfolio_path(portfolio_item) %>
-
-  <% if logged_in?(:admin) %>
-    <%= link_to "Edit", edit_portfolio_path(portfolio_item) %>
-    <%= link_to "Delete", portfolio_path(portfolio_item), method: :delete %>
-  <% end %>
+<div class="col-md-4">
+  <div class="card mb-4 box-shadow">
+    <%= image_tag portfolio_item.thumb_image %>
+    <div class="card-body">
+      <h5 class="text-primary"><%= portfolio_item.title %></h5>
+      <p class="card-text"><%= portfolio_item.subtitle.capitalize %></p>
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="btn-group">
+          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+        </div>
+        <small class="text-muted">9 mins</small>
+      </div>
+    </div>
+  </div>
 </div>

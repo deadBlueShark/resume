@@ -1,12 +1,14 @@
 <% provide :title, @blog.title %>
-<p>
-  <strong>Title:</strong>
-  <%= @blog.title %>
-</p>
-<p>
-  <strong>Body:</strong>
-  <%= @blog.body %>
-</p>
+<div class="col-md-8 blog-main">
+  <div class="blog-post">
+    <h2 class="blog-post-title"><%= @blog.title.downcase.capitalize %></h2>
+    <p class="blog-post-meta"><%= @blog.created_at.strftime("%B %d, %Y") %> by <a href="#">Jacob</a></p>
 
-<%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:admin) %> |
-<%= link_to 'Back', blogs_path %>
+    <p><%= @blog.body %></p>
+
+    <div>
+      <%= link_to "Edit this post", edit_blog_path(@blog) %>
+    </div>
+  </div>
+</div>
+

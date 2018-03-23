@@ -4,16 +4,22 @@ module ApplicationHelper
     title.blank? ? base_title : "#{title} | #{base_title}"
   end
 
-  def user_log_status
+  def user_log_status css_class
     if current_user.is_a? GuestUser
-      login_link = link_to "Login", new_user_session_path
-      signup_link = link_to "Register", new_user_registration_path
-      insert_content_to_tag(:div, login_link, "item") +
-      insert_content_to_tag(:div, signup_link, "item")
+      link_to("Log in", new_user_session_path, class: css_class) +
+      link_to("Register", new_user_registration_path, class: css_class)
     else
-      logout_link = link_to "Logout", destroy_user_session_path, method: :delete
-      insert_content_to_tag :div, logout_link, "item"
+      link_to("Account", edit_user_registration_path, class: css_class) +
+      link_to("Log out", destroy_user_session_path, method: :delete, class: css_class)
     end
+  end
+
+  def nav_generate css_class, html_tag
+    content_tag(html_tag){link_to "Home", root_path, class: css_class} +
+    content_tag(html_tag){link_to "Portfolio", portfolios_path, class: css_class} +
+    content_tag(html_tag){link_to "Blog", blogs_path, class: css_class} +
+    content_tag(html_tag){link_to "Contact", contact_path, class: css_class} +
+    content_tag(html_tag){link_to "About", about_path, class: css_class}
   end
 
   def source_helper
@@ -40,11 +46,5 @@ module ApplicationHelper
     when :alert then "alert-warning"
     when :success then "alert-success"
     end
-  end
-
-  private
-
-  def insert_content_to_tag html_tag, content, html_class = nil
-    content_tag html_tag, content, class: html_class
   end
 end

@@ -10,9 +10,27 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery3
+//= require jquery
 //= require popper
 //= require bootstrap-sprockets
 //= require rails-ujs
-//= require turbolinks
-//= require_tree .
+
+//
+/* From third party vendors */
+//= require sweetalert2/dist/sweetalert2
+
+/* Custom js */
+//= require google_map
+
+$(document).ready(function() {
+  $('.masthead-brand').on('click', function() {
+    swal(
+      'The Internet?',
+      'That thing is still around?',
+      'question'
+    );
+  });
+
+  $('*').find("a[href='"+window.location.pathname+"']").addClass("active");
+
+});
