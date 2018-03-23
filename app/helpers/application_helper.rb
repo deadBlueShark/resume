@@ -14,6 +14,14 @@ module ApplicationHelper
     end
   end
 
+  def nav_generate css_class, html_tag
+    content_tag(html_tag){link_to "Home", root_path, class: css_class} +
+    content_tag(html_tag){link_to "Portfolio", portfolios_path, class: css_class} +
+    content_tag(html_tag){link_to "Blog", blogs_path, class: css_class} +
+    content_tag(html_tag){link_to "Contact", contact_path, class: css_class} +
+    content_tag(html_tag){link_to "About", about_path, class: css_class}
+  end
+
   def source_helper
     content = "Thank for visiting me from #{session[:source]}"
     insert_content_to_tag(:div, content) if session[:source]

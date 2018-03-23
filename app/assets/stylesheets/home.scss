@@ -119,8 +119,21 @@ footer.mastfoot.mt-auto {
 }
 
 /*
- * Contact location
+ * Custom styles
  */
+
+a.nav-link {
+  margin-left: 30px;
+}
+
+.authen-area {
+  margin-left: 4em;
+}
+
+a.btn.btn-sm.btn-outline-secondary.blog-in {
+  margin-right: 10px;
+  color: #fff;
+}
 
 #map {
   height: 400px;

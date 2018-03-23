@@ -30,4 +30,7 @@ $(document).ready(function() {
       'question'
     );
   });
+
+  $('*').find("a[href='"+window.location.pathname+"']").addClass("active");
+
 });

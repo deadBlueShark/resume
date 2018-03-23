@@ -12,14 +12,13 @@
         <header class="masthead mb-auto">
           <div class="inner">
             <h3 class="masthead-brand">John Harvey</h3>
-            <nav class="nav nav-masthead justify-content-center">
-              <%= link_to "Home", root_path, class: "nav-link active" %>
-              <%= link_to "Portfolio", portfolios_path, class: "nav-link" %>
-              <%= link_to "Blog", blogs_path, class: "nav-link" %>
-              <%= link_to "Contact", contact_path, class: "nav-link" %>
-              <%= link_to "About", about_path, class: "nav-link" %>
-              <%= user_log_status "nav-link" %>
+            <nav class="nav nav-masthead justify-content-center home-nav">
+              <%= nav_generate "nav-link home-nav-item", :span %>
+              <div class="authen-area">
+              <%= user_log_status "btn btn-sm btn-outline-secondary blog-in" %>
+            </div>
             </nav>
+
           </div>
         </header>
         <%= render "shared/flash" %>

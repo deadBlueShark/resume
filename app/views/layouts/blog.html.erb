@@ -94,10 +94,7 @@
           <div class="p-3">
             <h4 class="font-italic">Navigation</h4>
             <ol class="list-unstyled mb-0">
-              <li><%= link_to "Home", root_path %></li>
-              <li><%= link_to "Portfolio", portfolios_path %></li>
-              <li><%= link_to "Contact", contact_path %></li>
-              <li><%= link_to "About", about_path %></li>
+              <%= nav_generate nil, :li %>
             </ol>
           </div>
 
