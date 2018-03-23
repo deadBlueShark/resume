@@ -6,6 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title><%= generate_title(yield :title) %></title>
+    <%= favicon_link_tag "favicon.ico" %>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag 'portfolio', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
