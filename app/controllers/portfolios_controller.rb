@@ -48,7 +48,7 @@ class PortfoliosController < ApplicationController
     params.require(:portfolio).permit(:title,
                                       :subtitle,
                                       :body,
-                                      technologies_attributes: [:name]
+                                      technologies_attributes: [:id, :name]
                                     ).merge(
                                       main_image: image_generator(600, 400),
                                       thumb_image: image_generator(250, 200)

@@ -18,6 +18,7 @@
 //
 /* From third party vendors */
 //= require sweetalert2/dist/sweetalert2
+//= require holder.min
 
 /* Custom js */
 //= require google_map
