@@ -10,6 +10,10 @@ Rails.application.routes.draw do
   end
 
   # Implement custom routes for show portfolio
-  resources :portfolios, except: :show
+  resources :portfolios, except: :show do
+    collection do
+      patch :sort
+    end
+  end
   get "/portfolio/:id", to: "portfolios#show", as: "show_portfolio"
 end

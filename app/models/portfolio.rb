@@ -12,4 +12,6 @@ class Portfolio < ApplicationRecord
   validates :body, presence: true
   validates :main_image, presence: true
   validates :thumb_image, presence: true
+
+  scope :sort_by_position, ->{order position: :asc}
 end

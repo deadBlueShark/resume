@@ -25,6 +25,7 @@ gem "petergate"
 gem "jquery-turbolinks"
 gem "font-awesome-rails"
 gem "kaminari"
+gem "jquery-ui-rails"
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 # Use ActiveModel has_secure_password
@@ -35,7 +36,7 @@ gem "kaminari"
 
 group :development, :test do
   # Call "byebug" anywhere in the code to stop execution and get a debugger console
-  gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
+  gem "byebug"
 end
 
 group :development do

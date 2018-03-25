@@ -2,10 +2,18 @@ class PortfoliosController < ApplicationController
   layout "portfolio"
   access all: [:show, :index],
     user: {except: [:new, :edit, :create, :update, :destroy]}, admin: :all
-  before_action :load_portfolio, except: [:index, :new, :create]
+  before_action :load_portfolio, except: [:index, :new, :create, :sort]
 
   def index
-    @portfolio_items = Portfolio.includes(:technologies)
+    @portfolio_items = Portfolio.sort_by_position
+  end
+
+  def sort
+    order = params[:order].values
+    order.each do |e|
+      Portfolio.find(e[:id]).update_attributes position: e[:position]
+    end
+    head :ok
   end
 
   def show
