@@ -21,7 +21,6 @@ a:hover {
 
 html,
 body {
-  background-color: #495057 !important;
 }
 
 body {
@@ -144,4 +143,36 @@ a.btn.btn-sm.btn-outline-secondary.blog-in {
 .edit-page {
   padding-top: 5em;
   color: #000;
+}
+
+.col-md-8.text-intro {
+  padding-left: 4em;
+}
+
+#image-background {
+  position: fixed;
+  left: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translateX(-50%) translate(-50%); // Same
+  background: image-url('background.jpg') no-repeat;
+  background-size: cover;
+}
+
+#video-backround {
+  position: fixed;
+  left: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translateX(-50%) translate(-50%); // Same
+  background: image-url('background.jpg') no-repeat;
+  background-size: cover;
 }
