@@ -9,7 +9,11 @@
   </head>
   <body>
     <div>
-      <div id="background"></div>
+      <% if false %>
+        <div id="image-background"></div>
+      <% end %>
+      <%= video_tag "background.mp4", id: "video-backround", autoplay: true,
+        loop: true, muted: true, poster: "slide3.jpg" %>
       <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
         <header class="masthead mb-auto">
 

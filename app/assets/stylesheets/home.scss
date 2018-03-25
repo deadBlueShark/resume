@@ -149,7 +149,21 @@ a.btn.btn-sm.btn-outline-secondary.blog-in {
   padding-left: 4em;
 }
 
-#background {
+#image-background {
+  position: fixed;
+  left: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translateX(-50%) translate(-50%); // Same
+  background: image-url('background.jpg') no-repeat;
+  background-size: cover;
+}
+
+#video-backround {
   position: fixed;
   left: 100%;
   min-width: 100%;
