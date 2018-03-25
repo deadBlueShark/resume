@@ -3,7 +3,7 @@
   <h3><%= @portfolio.subtitle %></h3>
   <br><br>
   <p><%= @portfolio.body %></p>
-  <%= image_tag @portfolio.main_image %>
+  <%= image_tag main_image(@portfolio) %>
 </div>
 
 <% @portfolio.technologies.each do |technology| %>

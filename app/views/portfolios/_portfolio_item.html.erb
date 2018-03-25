@@ -1,6 +1,6 @@
 <div class="col-md-4">
   <div class="card mb-4 box-shadow" data-id="<%= portfolio_item.id %>">
-    <%= image_tag portfolio_item.thumb_image %>
+    <%= image_tag thumbnail_image(portfolio_item) %>
     <div class="card-body">
       <h5 class="text-primary"><%= portfolio_item.title %></h5>
       <p class="card-text"><%= portfolio_item.subtitle.capitalize %></p>

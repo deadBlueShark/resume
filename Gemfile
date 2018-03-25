@@ -26,6 +26,10 @@ gem "jquery-turbolinks"
 gem "font-awesome-rails"
 gem "kaminari"
 gem "jquery-ui-rails"
+gem "mini_magick"
+gem 'carrierwave'
+gem 'carrierwave-aws'
+gem 'dotenv-rails', '~> 2.1'
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 # Use ActiveModel has_secure_password

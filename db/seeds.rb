@@ -21,9 +21,7 @@ end
   portfolio = Portfolio.create(
     title: FFaker::Product.product,
     subtitle: FFaker::Vehicle.manufacturer_color,
-    body: FFaker::Book.description,
-    main_image: "http://via.placeholder.com/600x400",
-    thumb_image: "http://via.placeholder.com/350x200"
+    body: FFaker::Book.description
   )
   3.times do
     portfolio.technologies.create(

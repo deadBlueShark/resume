@@ -53,14 +53,8 @@ class PortfoliosController < ApplicationController
   private
 
   def portfolio_params
-    params.require(:portfolio).permit(:title,
-                                      :subtitle,
-                                      :body,
-                                      technologies_attributes: [:id, :name]
-                                    ).merge(
-                                      main_image: image_generator(600, 400),
-                                      thumb_image: image_generator(250, 200)
-                                    )
+    params.require(:portfolio).permit(:title, :subtitle, :body, :main_image,
+      :thumb_image, technologies_attributes: [:id, :name])
   end
 
   def load_portfolio
