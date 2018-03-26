@@ -18,11 +18,12 @@ Bundler.require(*Rails.groups)
 module Resume
   class Application < Rails::Application
     config.load_defaults 5.1
+    config.eager_load_paths << "#{Rails.root}/lib"
 
     config.generators do |generator|
-      #generator.assets false
-      generator.stylesheets false
-      generator.javascripts false
+      generator.assets false
+      #generator.stylesheets false
+      #generator.javascripts false
 
       generator.template_engine :erb # Default
       generator.orm :active_record # Default

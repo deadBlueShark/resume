@@ -18,6 +18,7 @@ module ApplicationHelper
     content_tag(html_tag){link_to "Home", root_path, class: css_class} +
     content_tag(html_tag){link_to "Portfolio", portfolios_path, class: css_class} +
     content_tag(html_tag){link_to "Blog", blogs_path, class: css_class} +
+    content_tag(html_tag){link_to "Computer", computer_path, class: css_class} +
     content_tag(html_tag){link_to "Contact", contact_path, class: css_class} +
     content_tag(html_tag){link_to "About", about_path, class: css_class}
   end

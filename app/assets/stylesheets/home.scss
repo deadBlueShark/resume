@@ -41,7 +41,7 @@ body {
 }
 
 .cover-container {
-  max-width: 60em;
+  //max-width: 60em;
   min-width: 60em
 }
 
@@ -120,6 +120,13 @@ footer.mastfoot.mt-auto {
 /*
  * Custom styles
  */
+header.masthead.mb-auto {
+  padding-left: 5em;
+}
+
+h2.masthead-brand {
+  font-weight: bold;
+}
 
 a.nav-link {
   margin-left: 30px;
@@ -175,4 +182,16 @@ a.btn.btn-sm.btn-outline-secondary.blog-in {
   transform: translateX(-50%) translate(-50%); // Same
   background: image-url('background.jpg') no-repeat;
   background-size: cover;
+}
+
+footer.mastfoot.mt-auto {
+  padding-left: 5em;
+}
+
+.col-md-8.text-left.tweets-area {
+  background: #fff;
+  color: #000;
+  text-shadow: none;
+  padding: 1em 2em;
+  border-radius: 4px;
 }
