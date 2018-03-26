@@ -15,6 +15,7 @@
 //= require bootstrap-sprockets
 //= require rails-ujs
 //= require jquery-ui
+//= require cocoon
 
 //
 /* From third party vendors */
