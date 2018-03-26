@@ -101,6 +101,7 @@ GEM
       activerecord (>= 4.0.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
+    gritter (1.2.0)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
     jbuilder (2.7.0)
@@ -249,6 +250,7 @@ DEPENDENCIES
   ffaker
   font-awesome-rails
   friendly_id (~> 5.1.0)
+  gritter (= 1.2.0)
   jbuilder (~> 2.5)
   jquery-rails
   jquery-turbolinks
