@@ -16,6 +16,7 @@
 //= require rails-ujs
 //= require jquery-ui
 //= require cocoon
+//= require gritter
 
 //
 /* From third party vendors */
