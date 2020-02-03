@@ -1,24 +1,36 @@
-# README
+# RESUME APPLICATION
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### This is my personal portfolio which is a compilation of materials that exemplifies my beliefs, skills, qualifications, education, training and experiences.
 
-Things you may want to cover:
+To setup project running, follow below steps:
 
-* Ruby version
+## Environment:
 
-* System dependencies
+- Ruby 2.6
+- Rails 5.2.4
+- Database: PostgreSQL
 
-* Configuration
+## Setting steps:
 
-* Database creation
+1. Pull source from repository
+2. Update library:
 
-* Database initialization
+```ruby
+bundle
+```
 
-* How to run the test suite
+3. Set dotenv file
+4. Initialize database:
 
-* Services (job queues, cache servers, search engines, etc.)
+```ruby
+rails db:create
+rails db:migrate
+```
 
-* Deployment instructions
+5. Start rails server:
 
-* ...
+```ruby
+rails s
+```
+
+Go to http://localhost:3000/ and enjoy!

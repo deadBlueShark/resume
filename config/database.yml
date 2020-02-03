@@ -17,10 +17,9 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  # For details on connection pooling, see Rails configuration guide
-  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  username: <%= ENV['RESUME_DB_USERNAME'] %>
+  password: <%= ENV['RESUME_DB_PASSWORD'] %>
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-
 development:
   <<: *default
   database: resume_development
@@ -81,5 +80,4 @@ test:
 production:
   <<: *default
   database: resume_production
-  username: resume
-  password: <%= ENV['RESUME_DATABASE_PASSWORD'] %>
+
