@@ -22,13 +22,10 @@ module Resume
 
     config.generators do |generator|
       generator.assets false
-      #generator.stylesheets false
-      #generator.javascripts false
-
-      generator.template_engine :erb # Default
-      generator.orm :active_record # Default
+      generator.template_engine :erb
+      generator.orm :active_record
     end
+
     config.generators.system_tests = nil
-    #config.action_controller.permit_all_parameters = true
   end
 end
